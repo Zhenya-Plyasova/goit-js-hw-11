@@ -3,6 +3,7 @@ import axios from 'axios';
 import Notiflix from 'notiflix';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
+import InfiniteScroll from 'infinite-scroll';
 const API_KEY = '33415298-271b0b6a0a6f42bbb2b32552d';
 const URL = 'https://pixabay.com/api/';
 
@@ -16,6 +17,7 @@ let totalHits = 0;
 
 async function onSubmit(e){
  e.preventDefault();
+ window.scrollTo(0,0);
  page = 1;
  query = input.value.trim();
  if (query === "") {
