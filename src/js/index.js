@@ -39,6 +39,7 @@ if (results.length ===0){
    updateNewList(markup);
    showButton();
    Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`)
+
  } catch (error){
     console.log(error);
  } finally {
@@ -109,7 +110,9 @@ function createMarkup( results ){
 }
 
 function showButton() {
-  loadMore.classList.remove("disabled");
+  totalHits>40
+  ?loadMore.classList.remove("disabled")
+  :loadMore.classList.add("disabled");
 };
 function hideButton(){
   loadMore.classList.add("disabled");

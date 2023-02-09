@@ -3,9 +3,12 @@
     margin-top: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    // justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 10px;
 }
 
 .photo-card{
